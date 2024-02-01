@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 project(opengl_sample 
-	C CXX
+	LANGUAGES C CXX
 )
 
 # GLFW
@@ -26,5 +26,18 @@ add_subdirectory(glad)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(src)
+
+# Assets paths
+
+configure_file(
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/assets.hpp.in
+  ${CMAKE_CURRENT_BINARY_DIR}/src/assets.hpp
+)
+
+target_include_directories(app
+  PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/src
+)
+
+# Visual Studio properties
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT app)

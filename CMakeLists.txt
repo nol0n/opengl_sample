@@ -23,8 +23,6 @@ add_subdirectory(glad)
 
 # Project files
 
-set(CMAKE_CXX_STANDARD 11)
-
 add_subdirectory(src)
 
 # Assets paths

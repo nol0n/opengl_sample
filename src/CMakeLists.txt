@@ -13,9 +13,12 @@ add_library(mylib
 	mylib.hpp
 )
 
+add_subdirectory(shader)
+
 target_link_libraries(app
 	PRIVATE glfw
 	PRIVATE glad
 	PRIVATE glm
 	PRIVATE mylib
+	PRIVATE shader
 )

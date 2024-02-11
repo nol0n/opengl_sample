@@ -21,6 +21,10 @@ add_subdirectory(external/glm/)
 
 add_subdirectory(glad)
 
+# stb_image.h
+
+add_subdirectory(stb_image)
+
 # Project files
 
 add_subdirectory(src)

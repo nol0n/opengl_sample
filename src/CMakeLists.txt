@@ -19,6 +19,7 @@ target_link_libraries(app
 	PRIVATE glfw
 	PRIVATE glad
 	PRIVATE glm
+	PRIVATE stb_image
 	PRIVATE mylib
 	PRIVATE shader
 )
